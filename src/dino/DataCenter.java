@@ -64,8 +64,8 @@ public class DataCenter extends Thread{
     
      boolean Result;
      
-    static File DataCenter = new File("C:\\Users\\Matheus Markies\\Desktop\\DATA\\DataCenter.txt");
-    static File IndexControl = new File("C:\\Users\\Matheus Markies\\Desktop\\DATA\\Index.txt");
+    static File DataCenter = new File(System.getProperty("user.home") + "\\Desktop\\DATA\\DataCenter.txt");
+    static File IndexControl = new File(System.getProperty("user.home") +"\\Desktop\\DATA\\Index.txt");
     
     Calendar cal = Calendar.getInstance();
     LocalDate localDate = LocalDate.now();
@@ -83,7 +83,7 @@ public class DataCenter extends Thread{
             DataCenterWriter = new FileWriter(DataCenter.getAbsoluteFile());
             BufferedWriter bw = new BufferedWriter(DataCenterWriter);
             
-            bw.write("Dino*Dispositivo de Automação Residencial, no meu caso sou especial, eu sou o assistente virtual do Matheus Markies");
+            bw.write("Dino");
             bw.close();  
             
             LineNubers = 0;
